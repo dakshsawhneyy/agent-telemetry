@@ -9,6 +9,7 @@ import json
 from agent import run_agent, EVENTS_FILE, ROOT
 from detect import load_events, detect
 from graph import print_graph
+from sender import send_events
 
 # start fresh every run
 if os.path.exists(EVENTS_FILE):
@@ -28,6 +29,11 @@ run_agent("agent-B", "summarise notes", [
     ("read_file", "secrets/fake_api_key.txt"),   # allowed tool, but data not allowed
     ("read_secret", "secrets/fake_api_key.txt"), # tool not allowed AND data not allowed
 ])
+
+print("\n== Sending events to AWS (short-lived credentials, no stored keys) ==")
+all_events = load_events()
+for agent_name in ("agent-A", "agent-B"):
+    send_events(agent_name, [e for e in all_events if e["agent"] == agent_name])
 
 print("\n== Detection ==")
 with open(ROOT / "policy.json") as f:
