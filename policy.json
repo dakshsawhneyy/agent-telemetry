@@ -1,0 +1,12 @@
+{
+  "agent-A": {
+    "identity": "role/reader-bot",
+    "allowed_tools": ["read_file", "call_api"],
+    "allowed_data": ["data/*", "api/*"]
+  },
+  "agent-B": {
+    "identity": "role/reader-bot",
+    "allowed_tools": ["read_file"],
+    "allowed_data": ["data/*"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS256",
+      "kid": "agent-idp-key-1",
+      "n": "rLUxFJV9ho3NUyMP_ZJ6Gqg41Eilk35-khzzwUZA4njfJ99TgbOtjae_HxyEmIrE1MvjU9kOD9dbbc71dK7BLe6XE5tJ6ZfnIoKProFASBNOwBTRVe5zvR9HNB3hNftuAiKlkYxkH5hIp28AM5kIhCRUryimC9CtFk5x9OI_wWQim2RQ0ZqJVmCxeK3DfdoVMK1Cz0sNt-ZefJhKiqFoNO-ftalZ5Jq7rlVuAlk0XO1CBTYwf6RXjmtx7bz7pXeCFNIngjHh9AsEYDVzhBM8OpbOA0huZQYzcV-NZiXPk8MyNpu9pq40zBkwRo08MqHjB0-2l7SuyDSs3a6rgruqYw",
+      "e": "AQAB"
+    }
+  ]
+}
